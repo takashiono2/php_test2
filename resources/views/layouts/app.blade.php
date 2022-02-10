@@ -20,9 +20,9 @@
         <div class="min-h-screen bg-gray-100">
             @if(auth('admin')->user())
                 @include('layouts.admin-navigation')
-            @elesif(auth('owners')->user())
-                @include('layouts.onwer-navigation')
-            @elesif(auth('users')->user())
+            @elseif(auth('owners')->user())
+                @include('layouts.owner-navigation')
+            @elseif(auth('users')->user())
                 @include('layouts.user-navigation')
             @endif
             <!-- Page Heading -->
