@@ -32,8 +32,9 @@ class OwnersController extends Controller{
         //     'name'=>'てすと'
         // ]);
 
-        // dd($e_all,$q_get,$q_first,$c_test);
-        $owners = Owner::select('id','name','email','created_at')->get();//idを追加
+//ページネーションの設定3つ区切り
+        $owners = Owner::select('id','name','email','created_at')
+                ->paginate(3);//idを追加
 
         return view('admin.owners.index',compact('owners'));
     }
