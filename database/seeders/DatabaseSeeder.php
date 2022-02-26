@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run(){
         $this->call([
             OwnerSeeder::class,
-            AdminSeeder::class
+            AdminSeeder::class,
+            ShopSeeder::class
         ]);
     }
 }
